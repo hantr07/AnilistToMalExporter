@@ -1,41 +1,23 @@
-# AnilistToMalExporter
-Generates the .xml file from Anilist to be imported to MAL.
+# AnilistToMalExporter (Anime & Manga)
 
-# Requirements
-* Python 3.10 [ should work with most python version ]
+[![Python](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-# How to use?
+A Python script to export your AniList anime **and manga** lists to MyAnimeList (MAL)-compatible XML files. This is a fork of [staticaron/AnilistToMalExporter](https://github.com/staticaron/AnilistToMalExporter) with added support for exporting manga lists.
 
-* Clone the repo to your local machine.
-* Create a virtual environment.
-* Install the dependencies : 
+## Features
+- Exports AniList anime lists to MAL XML format (e.g., `Watching`, `Completed`, `Plan to Watch`).
+- **New**: Exports AniList manga lists to MAL XML format (e.g., `Reading`, `Completed`, `Plan to Read`).
+- Generates separate XML files for anime (`<username>_MAL_anime.xml`) and manga (`<username>_MAL_manga.xml`).
+- Maps AniList statuses, progress, scores, and start/end dates to MAL’s format.
+- Simple command-line interface.
 
-      pip install -r requirements.txt
-      
-* Run the convertor.py file and pass your username as a parameter.
+## Prerequisites
+- Python 3.6 or higher
+- Required libraries: `requests`, `xml.etree.ElementTree` (included in Python standard library)
 
-      python convertor.py Laevateinn
-    
- _A file **\<anilistusername\>.xml** will be generated_
-
-# How to import .xml file into your MAL account.
-
-* Go to [MyAnimeList](https://myanimelist.net/) and log in with your MAL account.
-* Click on _Add Entries_ : 
-
-![image](https://user-images.githubusercontent.com/66104268/209352044-c71de3d9-dd86-45f2-a1b5-d4e175f26cc8.png)
-
-* Click on _Import Lists_
-
-![image](https://user-images.githubusercontent.com/66104268/209352265-9591203b-b9d0-4a33-b412-6613b3c28dec.png)
-
-* Select _MyAnimeList Import_ and Upload the .xml file.
-
-![image](https://user-images.githubusercontent.com/66104268/209352442-a8f6d230-0487-4e34-b3ab-078936084925.png)
-
-* Finish and Click on Import Data.
-
-## Watch Out.
-
-There may be some entries that are not recognised by the APIs. These entries will be shown in the terminal with ERROR tag. Make sure to manually add them after the import is complete.
-
+## Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/<your-username>/AnilistToMalExporter.git
+   cd AnilistToMalExporter
